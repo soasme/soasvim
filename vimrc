@@ -7,6 +7,8 @@ call vundle#rc()
 "+++++++++++++++ Bundle ++++++++++++++++++
 Bundle 'gmarik/vundle'
 
+Bundle 'minibufexpl.vim'
+
 Bundle 'git://github.com/scrooloose/nerdtree.git'
 Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
 if executable('ack')
@@ -58,17 +60,17 @@ cmap Tabe tabe
 cmap Vs vs
 cmap VS vs
 cmap Sp sp
-map <C-J> <C-W>j<C-W>
-map <C-K> <C-W>k<C-W>
-map <C-L> <C-W>l<C-W>
-map <C-H> <C-W>h<C-W>
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
+map <C-H> <C-W>h
 nmap <silent> <leader>/ :nohlsearch<CR>
 " }
 
 "+++++++++++++++ plug-in ++++++++++++++++++
 " NerdTree {
     map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
-    map <leader>e :NERDTreeFind<CR>
+    map <leader><leader>e :NERDTreeFind<CR>
     nmap <leader>nt :NERDTreeFind<CR>
 
     let NERDTreeShowBookmarks=1
@@ -78,4 +80,9 @@ nmap <silent> <leader>/ :nohlsearch<CR>
     let NERDTreeShowHidden=1
     let NERDTreeKeepTreeInNewTab=1
 "}
+" EasyMotion {
+    let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
+    let g:EasyMotion_do_share = 0
+    let g:EasyMotion_leader_key = '<Leader>'
+" }
 
