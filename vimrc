@@ -10,6 +10,9 @@ Bundle 'gmarik/vundle'
 Bundle 'minibufexpl.vim'
 Bundle 'surround.vim'
 Bundle 'snipMate'
+Bundle 'AutoComplPop'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
 
 Bundle 'git://github.com/scrooloose/nerdtree.git'
 Bundle 'git://github.com/scrooloose/nerdcommenter.git'
@@ -17,7 +20,7 @@ Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
 Bundle 'git://github.com/kien/ctrlp.vim.git'
 
 if executable('ack')
-    Bundle 'Mileszs/ack.vim'
+    Bundle 'git://github.com/mileszs/ack.vim.git'
 endif
 
 

@@ -11,7 +11,6 @@ if you want to use soasvim, just type these commands:
     sh install.sh
 
 
-
 ### maps
 I map some stupid error like:
 
@@ -60,3 +59,9 @@ use v to choose lines, and then
 use ctrl-p to open the convenient explorer to find the file.
 
 just type 'bomosu' , it probably check the file 'book/model/subject.py'
+
+### Autocomlopop
+
+### FuzzyFinder
+
+
