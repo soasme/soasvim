@@ -8,8 +8,11 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'minibufexpl.vim'
+Bundle 'surround.vim'
+Bundle 'snipMate'
 
 Bundle 'git://github.com/scrooloose/nerdtree.git'
+Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
 if executable('ack')
     Bundle 'Mileszs/ack.vim'

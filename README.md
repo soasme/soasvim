@@ -21,16 +21,29 @@ and some convenient binds like:
 you can also type ; to replace :, it's cool.
 
 ### NERDTree
-<C-e> or ,,e to see a file-tree command.
+see a file-tree command:
+    <C-e> or ,,e
 
 ### EasyMotion
-,f<word> ,F<word> to jump to the word quikly.
-,b 
-,w
-,j
-,k
+jump to the word quikly:
+    ,f<word> ,F<word>
+    ,b 
+    ,w
+    ,j
+    ,k
 
 ### Mini Buffer Explorer
-It's on the top. use <tab> to change the current edited file.
+It's on the top. use tab to change the current edited file.
 
+### snipMate
+a snip like textmate
+type
+    for<tab> 
+    it will change to 
+    for xxx in xxx:
+        # content
 
+### NERDCommenter
+use v to choose lines, and then
+    ,c<space>   it will comment the line.
+    ,ci         it will uncomment the line.
