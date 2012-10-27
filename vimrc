@@ -4,32 +4,33 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+set t_Co=256
+colorscheme Tomorrow-Night-Bright
+
 "+++++++++++++++ Bundle ++++++++++++++++++
 Bundle 'gmarik/vundle'
 
-Bundle 'minibufexpl.vim'
 Bundle 'surround.vim'
-Bundle 'snipMate'
-Bundle 'AutoComplPop'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-
-Bundle 'git://github.com/scrooloose/nerdtree.git'
 Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
-Bundle 'git://github.com/kien/ctrlp.vim.git'
+Bundle 'git://github.com/ap/vim-css-color.git'
+Bundle 'git://github.com/tpope/vim-fugitive.git'
+Bundle 'git://github.com/jeetsukumaran/vim-buffergator.git'
+Bundle 'git://github.com/michaeljsmith/vim-indent-object.git'
+Bundle 'git://github.com/ervandew/supertab.git'
+Bundle 'git://github.com/Lokaltog/vim-powerline.git'
+Bundle 'git://github.com/plasticboy/vim-markdown.git'
+Bundle 'git://github.com/pangloss/vim-javascript.git'
 
 if executable('ack')
     Bundle 'git://github.com/mileszs/ack.vim.git'
 endif
-
 
 " Formatting {
 set background=dark " Assume a dark background
 filetype plugin indent on " Automatically detect file type
 syntax on " Syntax highlighting
 scriptencoding utf-8 " you really want me to explain this?
-set spell " spell checking on
 set cursorline " highlight current line
 set showmode " display the current mode
 set tabpagemax=15 " only show 15 tabs
@@ -72,25 +73,15 @@ map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-L> <C-W>l
 map <C-H> <C-W>h
-nmap <silent> <leader>/ :nohlsearch<CR>
 " }
 
-"+++++++++++++++ plug-in ++++++++++++++++++
-" NerdTree {
-    map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
-    map <leader><leader>e :NERDTreeFind<CR>
-    nmap <leader>nt :NERDTreeFind<CR>
 
-    let NERDTreeShowBookmarks=1
-    let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
-    let NERDTreeChDirMode=0
-    let NERDTreeQuitOnOpen=1
-    let NERDTreeShowHidden=1
-    let NERDTreeKeepTreeInNewTab=1
-"}
+"+++++++++++++++ plug-in ++++++++++++++++++
 " EasyMotion {
     let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
     let g:EasyMotion_do_share = 0
     let g:EasyMotion_leader_key = '<Leader>'
 " }
-
+" Powerline {
+    let g:Powerline_symbols = 'fancy'
+" }
