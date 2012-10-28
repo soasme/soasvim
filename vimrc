@@ -26,6 +26,14 @@ if executable('ack')
     Bundle 'git://github.com/mileszs/ack.vim.git'
 endif
 
+if executable('pbcopy')
+    vmap <C-c> y:call system("pbcopy", getreg("\""))
+    nmap <C-p> :call setreg("\"",system("pbpaste"))
+elseif executable('xsel')
+    map <C-c> "+y
+    map <C-v> "+p
+endif
+
 " Formatting {
 set background=dark " Assume a dark background
 filetype plugin indent on " Automatically detect file type
@@ -73,6 +81,8 @@ map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-L> <C-W>l
 map <C-H> <C-W>h
+map <C-c> "+y
+map <C-v> "+p
 " }
 
 
@@ -85,3 +95,4 @@ map <C-H> <C-W>h
 " Powerline {
     let g:Powerline_symbols = 'fancy'
 " }
+"
