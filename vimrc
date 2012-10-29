@@ -27,8 +27,8 @@ if executable('ack')
 endif
 
 if executable('pbcopy')
-    vmap <C-c> y:call system("pbcopy", getreg("\""))
-    nmap <C-p> :call setreg("\"",system("pbpaste"))
+    vmap <C-c> :call system("pbcopy", getreg("\""))
+    nmap <C-p> :call setreg("\"",system("pbpaste"))<CR>p
 elseif executable('xsel')
     map <C-c> "+y
     map <C-v> "+p
@@ -83,6 +83,10 @@ map <C-L> <C-W>l
 map <C-H> <C-W>h
 map <C-c> "+y
 map <C-v> "+p
+nmap <tab> V>
+nmap <s-tab> V<
+vmap <tab> >gv
+vmap <s-tab> <gv
 " }
 
 
