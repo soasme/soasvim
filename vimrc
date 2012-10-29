@@ -21,6 +21,7 @@ Bundle 'git://github.com/ervandew/supertab.git'
 Bundle 'git://github.com/Lokaltog/vim-powerline.git'
 Bundle 'git://github.com/plasticboy/vim-markdown.git'
 Bundle 'git://github.com/pangloss/vim-javascript.git'
+Bundle 'git://github.com/jnwhiteh/vim-golang.git'
 
 if executable('ack')
     Bundle 'git://github.com/mileszs/ack.vim.git'
