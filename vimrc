@@ -22,6 +22,7 @@ Bundle 'git://github.com/Lokaltog/vim-powerline.git'
 Bundle 'git://github.com/plasticboy/vim-markdown.git'
 Bundle 'git://github.com/pangloss/vim-javascript.git'
 Bundle 'git://github.com/jnwhiteh/vim-golang.git'
+Bundle 'git://github.com/vim-scripts/genutils.git'
 
 if executable('ack')
     Bundle 'git://github.com/mileszs/ack.vim.git'
@@ -31,16 +32,17 @@ if executable('pbcopy')
     vmap <C-c> :call system("pbcopy", getreg("\""))
     nmap <C-p> :call setreg("\"",system("pbpaste"))<CR>p
 elseif executable('xsel')
-    map <C-c> "+y
-    map <C-v> "+p
 endif
 
 " Formatting {
+set rtp+=$GOROOT/misc/vim
 set background=dark " Assume a dark background
 filetype plugin indent on " Automatically detect file type
+set smartindent " indent the same level of the previous line
 syntax on " Syntax highlighting
 scriptencoding utf-8 " you really want me to explain this?
 set cursorline " highlight current line
+set cursorcolumn " highlight current column
 set showmode " display the current mode
 set tabpagemax=15 " only show 15 tabs
 set nu " line numbers on
@@ -56,7 +58,6 @@ set foldenable " hey, open it if you like.
 set list
 set listchars=tab:,.,trail:.,extends:#,nbsp:. "Highlight problematic whitespace
 set scrolljump=5 " lines to scroll when cursor leaves screen
-set autoindent " indent the same level of the previous line
 set shiftwidth=4 " use indents of 4 spaces
 set expandtab " tabs ---> spaces
 set tabstop=4 " an indentation every four columns
@@ -69,6 +70,7 @@ set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
 "+++++++++++++++ Mapping ++++++++++++++++
 let mapleader=','
 nnoremap ; :
+nnoremap :: :!
 cmap W w
 cmap Q q
 cmap Wq wq
@@ -82,8 +84,6 @@ map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-L> <C-W>l
 map <C-H> <C-W>h
-map <C-c> "+y
-map <C-v> "+p
 nmap <tab> V>
 nmap <s-tab> V<
 vmap <tab> >gv
