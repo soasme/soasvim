@@ -34,6 +34,10 @@ if executable('pbcopy')
 elseif executable('xsel')
 endif
 
+if executable('zsh')
+    set shell=/bin/zsh
+endif
+
 " Formatting {
 set rtp+=$GOROOT/misc/vim
 set background=dark " Assume a dark background
@@ -49,6 +53,7 @@ set nu " line numbers on
 set showmatch " find matching brackets
 set incsearch " find as you type search
 set hlsearch " highlight search words
+set title " show title as current file
 set ignorecase " case insensitive search
 set smartcase
 set wildmenu " show list instead
@@ -57,6 +62,7 @@ set whichwrap=b,s,h,l,<,>,[,] " backspace and cursor keys wrap to
 set foldenable " hey, open it if you like.
 set list
 set listchars=tab:,.,trail:.,extends:#,nbsp:. "Highlight problematic whitespace
+set showbreak=↪
 set scrolljump=5 " lines to scroll when cursor leaves screen
 set shiftwidth=4 " use indents of 4 spaces
 set expandtab " tabs ---> spaces
@@ -66,30 +72,69 @@ autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml autocmd BufWriteP
 set showcmd " show command
 set ruler " show ruler
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
+set colorcolumn=85
+" use relatice (offset) line number only in active window split
+set relativenumber
+au WinEnter * :setlocal relativenumber
 
 "+++++++++++++++ Mapping ++++++++++++++++
+" Use , as Leader Key
 let mapleader=','
+
+" Use ,/ to nohlsearch
+map <silent><Leader>/ :nohlsearch<CR>
+
+" Just type ; as :, example";w" will save file
 nnoremap ; :
 nnoremap :: :!
-cmap W w
-cmap Q q
-cmap Wq wq
-cmap WQ wq
-cmap wQ wq
-cmap Tabe tabe
-cmap Vs vs
-cmap VS vs
-cmap Sp sp
+
+" Use Ctrl-JKLH to jump in split windows.
 map <C-J> <C-W>j
 map <C-K> <C-W>k
 map <C-L> <C-W>l
 map <C-H> <C-W>h
+nnoremap <c-p> :bp<CR>
+nnoremap <c-n> :bn<CR>
+
+" Use H/L to jump begin and end
+noremap H ^
+noremap L $
+
+" Ctrl-a to select all
+map <C-a> ggvG
+
+" Search the line in the middle
+nnoremap <silent>n nzz
+nnoremap <silent>N Nzz
+nnoremap <silent>* *zz
+nnoremap <silent># #zz
+
+" Use jk to ESC in insert mode
+imap jk <ESC>
+imap kj <ESC>
+vmap jk <ESC>
+vmap kj <ESC>
+
+" Use - to exchange the line and above
+" Use _ to exchange the line and next
+map - ddkP
+map _ ddp
+
+" Use space to select a word.
+nmap <space> viw
+vmap <space> <ESC><ESC>
+
+" Use tab ad shift-tab to indent.
 nmap <tab> V>
 nmap <s-tab> V<
 vmap <tab> >gv
 vmap <s-tab> <gv
+vnoremap < <gv
+vnoremap > >gv
 " }
 
+" Use Y to copy line
+map Y y$
 
 "+++++++++++++++ plug-in ++++++++++++++++++
 " EasyMotion {
@@ -100,4 +145,10 @@ vmap <s-tab> <gv
 " Powerline {
     let g:Powerline_symbols = 'fancy'
 " }
+" BufferGator {
+    map <Leader>g :BuffergatorOpen
+" }
 "
+"
+
+iabbrev #_ # -*- coding: utf-8 -*-
