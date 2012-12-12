@@ -23,6 +23,7 @@ Bundle 'git://github.com/plasticboy/vim-markdown.git'
 Bundle 'git://github.com/pangloss/vim-javascript.git'
 Bundle 'git://github.com/jnwhiteh/vim-golang.git'
 Bundle 'git://github.com/vim-scripts/genutils.git'
+Bundle 'git://github.com/davidhalter/jedi-vim.git'
 
 if executable('ack')
     Bundle 'git://github.com/mileszs/ack.vim.git'
@@ -111,9 +112,7 @@ nnoremap <silent># #zz
 
 " Use jk to ESC in insert mode
 imap jk <ESC>
-imap kj <ESC>
 vmap jk <ESC>
-vmap kj <ESC>
 
 " Use - to exchange the line and above
 " Use _ to exchange the line and next
