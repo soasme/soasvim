@@ -5,12 +5,15 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 set t_Co=256
-colorscheme Tomorrow-Night-Bright
+let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
 
 "+++++++++++++++ Bundle ++++++++++++++++++
 Bundle 'gmarik/vundle'
 
 Bundle 'surround.vim'
+Bundle 'taglist.vim'
 Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
 Bundle 'git://github.com/ap/vim-css-color.git'
@@ -24,6 +27,8 @@ Bundle 'git://github.com/pangloss/vim-javascript.git'
 Bundle 'git://github.com/jnwhiteh/vim-golang.git'
 Bundle 'git://github.com/vim-scripts/genutils.git'
 Bundle 'git://github.com/davidhalter/jedi-vim.git'
+
+Bundle 'git://github.com/altercation/vim-colors-solarized.git'
 
 if executable('ack')
     Bundle 'git://github.com/mileszs/ack.vim.git'
@@ -70,6 +75,7 @@ set expandtab " tabs ---> spaces
 set tabstop=4 " an indentation every four columns
 set softtabstop=4 " let backspace delete indent
 autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")')) " remote trailing whitespace and ^M chars
+autocmd FileType html setlocal et sta sw=2 sts=2
 set showcmd " show command
 set ruler " show ruler
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
@@ -146,6 +152,9 @@ map Y y$
 " }
 " BufferGator {
     map <Leader>g :BuffergatorOpen
+" }
+" Taglist {
+    map <Leader>l :TlistToggle<CR>
 " }
 "
 "
