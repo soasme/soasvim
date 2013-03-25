@@ -75,7 +75,7 @@ set expandtab " tabs ---> spaces
 set tabstop=4 " an indentation every four columns
 set softtabstop=4 " let backspace delete indent
 autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")')) " remote trailing whitespace and ^M chars
-autocmd FileType html setlocal et sta sw=2 sts=2
+autocmd FileType html,ruby,rb setlocal et sta sw=2 sts=2
 set showcmd " show command
 set ruler " show ruler
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
