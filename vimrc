@@ -29,6 +29,7 @@ Bundle 'git://github.com/vim-scripts/genutils.git'
 Bundle 'git://github.com/davidhalter/jedi-vim.git'
 
 Bundle 'git://github.com/altercation/vim-colors-solarized.git'
+Bundle 'git://github.com/tpope/vim-dispatch.git'
 
 if executable('ack')
     Bundle 'git://github.com/mileszs/ack.vim.git'
