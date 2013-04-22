@@ -6,8 +6,8 @@ call vundle#rc()
 
 set t_Co=256
 let g:solarized_termcolors=256
-set background=dark
 colorscheme solarized
+set background=dark
 
 "+++++++++++++++ Bundle ++++++++++++++++++
 Bundle 'gmarik/vundle'
@@ -27,6 +27,10 @@ Bundle 'git://github.com/pangloss/vim-javascript.git'
 Bundle 'git://github.com/jnwhiteh/vim-golang.git'
 Bundle 'git://github.com/vim-scripts/genutils.git'
 Bundle 'git://github.com/davidhalter/jedi-vim.git'
+Bundle 'git://github.com/terryma/vim-multiple-cursors.git'
+Bundle 'git@github.com:mhinz/vim-signify.git'
+Bundle 'git@github.com:scrooloose/syntastic.git'
+Bundle 'git@github.com:kevinw/pyflakes-vim.git'
 
 Bundle 'git://github.com/altercation/vim-colors-solarized.git'
 Bundle 'git://github.com/tpope/vim-dispatch.git'
@@ -76,7 +80,7 @@ set expandtab " tabs ---> spaces
 set tabstop=4 " an indentation every four columns
 set softtabstop=4 " let backspace delete indent
 autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")')) " remote trailing whitespace and ^M chars
-autocmd FileType html,ruby,rb setlocal et sta sw=2 sts=2
+autocmd FileType html,javascript,ruby setlocal et sta sw=2 sts=2
 set showcmd " show command
 set ruler " show ruler
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
