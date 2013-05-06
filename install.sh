@@ -11,7 +11,7 @@ cd ~/.vim/colors
 curl https://raw.github.com/tpope/vim-vividchalk/master/colors/vividchalk.vim > vividchalk.vim
 curl https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim > solarized.vim
 curl https://raw.github.com/garybernhardt/dotfiles/master/.vim/colors/grb256.vim > grb256.vim
-curl https://github.com/sickill/vim-monokai/raw/master/colors/Monokai.vim > Monokai
+curl https://raw.github.com/sickill/vim-monokai/master/colors/Monokai.vim > Monokai.vim
 
 echo "installing plugin using Vundle"
 vim +BundleInstall! +BundleClean +q
