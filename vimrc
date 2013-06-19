@@ -84,9 +84,10 @@ autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml autocmd BufWriteP
 autocmd FileType html,javascript,ruby,css,eruby setlocal et sta sw=2 sts=2
 set showcmd " show command
 set ruler " show ruler
+set spell spelllang=en_us " spell check
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
 set colorcolumn=85
-" use relatice (offset) line number only in active window split
+" use relative (offset) line number only in active window split
 set relativenumber
 au WinEnter * :setlocal relativenumber
 
@@ -94,7 +95,7 @@ au WinEnter * :setlocal relativenumber
 " Use , as Leader Key
 let mapleader=','
 
-" Use ,/ to nohlsearch
+" Use ,/ to cancel highlight
 map <silent><Leader>/ :nohlsearch<CR>
 
 " Just type ; as :, example";w" will save file
@@ -113,7 +114,7 @@ nnoremap <c-n> :bn<CR>
 noremap H ^
 noremap L $
 
-" Ctrl-a to select all
+" ctrl-a to select all
 map <C-a> ggvG
 
 " Search the line in the middle
