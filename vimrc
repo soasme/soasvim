@@ -34,6 +34,7 @@ Bundle 'git://github.com/kevinw/pyflakes-vim.git'
 Bundle 'git://github.com/altercation/vim-colors-solarized.git'
 Bundle 'git://github.com/tpope/vim-dispatch.git'
 Bundle 'git@github.com:kien/ctrlp.vim.git'
+Bundle 'git@github.com:alfredodeza/pytest.vim.git'
 
 if executable('ack')
     Bundle 'git://github.com/mileszs/ack.vim.git'
@@ -162,6 +163,26 @@ map Y y$
     map <Leader>l :TlistToggle<CR>
 " }
 "
-"
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 
 iabbrev #_ # -*- coding: utf-8 -*-
+
+" Pytest
+nmap <silent><Leader>f <Esc>:Pytest file<CR>
+nmap <silent><Leader>c <Esc>:Pytest class<CR>
+nmap <silent><Leader>m <Esc>:Pytest method<CR>
+
+nmap <c-s> <Plug>Ysurround
+xmap s <Plug>VSurround
+imap <c-s> <Plug>ISurround
+inoremap $<space> <space><space><left>
+inoremap $( ()<left>
+inoremap $[ []<left>
+inoremap ${ {}<left>
+inoremap $< <><left>
+inoremap ${ {}<left><CR><esc>O
+inoremap $$ $
+inoremap $' ''<left>
+inoremap $" ""<left>
+inoremap $R <backspace><delete>
