@@ -28,13 +28,14 @@ Bundle 'git://github.com/jnwhiteh/vim-golang.git'
 Bundle 'git://github.com/vim-scripts/genutils.git'
 Bundle 'git://github.com/davidhalter/jedi-vim.git'
 Bundle 'git://github.com/terryma/vim-multiple-cursors.git'
-Bundle 'git@github.com:mhinz/vim-signify.git'
-Bundle 'git@github.com:scrooloose/syntastic.git'
-Bundle 'git@github.com:kevinw/pyflakes-vim.git'
+Bundle 'git://github.com/mhinz/vim-signify.git'
+Bundle 'git://github.com/scrooloose/syntastic.git'
+Bundle 'git://github.com/kevinw/pyflakes-vim.git'
 Bundle 'git://github.com/altercation/vim-colors-solarized.git'
 Bundle 'git://github.com/tpope/vim-dispatch.git'
 Bundle 'git@github.com:kien/ctrlp.vim.git'
 Bundle 'git@github.com:slim-template/vim-slim.git'
+Bundle 'git@github.com:alfredodeza/pytest.vim.git'
 
 if executable('ack')
     Bundle 'git://github.com/mileszs/ack.vim.git'
@@ -85,9 +86,10 @@ autocmd FileType html,javascript,ruby,css,eruby,slim setlocal et sta sw=2 sts=2
 au BufRead,BufNewFile *.ru setfiletype ruby
 set showcmd " show command
 set ruler " show ruler
+set spell spelllang=en_us " spell check
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
 set colorcolumn=85
-" use relatice (offset) line number only in active window split
+" use relative (offset) line number only in active window split
 set relativenumber
 au WinEnter * :setlocal relativenumber
 
@@ -95,7 +97,7 @@ au WinEnter * :setlocal relativenumber
 " Use , as Leader Key
 let mapleader=','
 
-" Use ,/ to nohlsearch
+" Use ,/ to cancel highlight
 map <silent><Leader>/ :nohlsearch<CR>
 
 " Just type ; as :, example";w" will save file
@@ -114,7 +116,7 @@ nnoremap <c-n> :bn<CR>
 noremap H ^
 noremap L $
 
-" Ctrl-a to select all
+" ctrl-a to select all
 map <C-a> ggvG
 
 " Search the line in the middle
@@ -164,6 +166,26 @@ map Y y$
     map <Leader>l :TlistToggle<CR>
 " }
 "
-"
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 
 iabbrev #_ # -*- coding: utf-8 -*-
+
+" Pytest
+nmap <silent><Leader>f <Esc>:Pytest file<CR>
+nmap <silent><Leader>c <Esc>:Pytest class<CR>
+nmap <silent><Leader>m <Esc>:Pytest method<CR>
+
+nmap <c-s> <Plug>Ysurround
+xmap s <Plug>VSurround
+imap <c-s> <Plug>ISurround
+inoremap $<space> <space><space><left>
+inoremap $( ()<left>
+inoremap $[ []<left>
+inoremap ${ {}<left>
+inoremap $< <><left>
+inoremap ${ {}<left><CR><esc>O
+inoremap $$ $
+inoremap $' ''<left>
+inoremap $" ""<left>
+inoremap $R <backspace><delete>
