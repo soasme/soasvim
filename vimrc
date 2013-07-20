@@ -179,13 +179,13 @@ nmap <silent><Leader>m <Esc>:Pytest method<CR>
 nmap <c-s> <Plug>Ysurround
 xmap s <Plug>VSurround
 imap <c-s> <Plug>ISurround
-inoremap $<space> <space><space><left>
-inoremap $( ()<left>
-inoremap $[ []<left>
-inoremap ${ {}<left>
-inoremap $< <><left>
-inoremap ${ {}<left><CR><esc>O
+
 inoremap $$ $
-inoremap $' ''<left>
-inoremap $" ""<left>
-inoremap $R <backspace><delete>
+inoremap (( ()<left>
+inoremap [[ []<left>
+inoremap {{ {}<left>
+inoremap ${ {}<left><CR><esc>O
+inoremap << <><left>
+inoremap '' ''<left>
+inoremap "" ""<left>
+inoremap <c-D> <backspace><delete>
