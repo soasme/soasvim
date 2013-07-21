@@ -89,13 +89,54 @@ set ruler " show ruler
 set spell spelllang=en_us " spell check
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
 set colorcolumn=85
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 " use relative (offset) line number only in active window split
 set relativenumber
+
 au WinEnter * :setlocal relativenumber
 
 "+++++++++++++++ Mapping ++++++++++++++++
 " Use , as Leader Key
 let mapleader=','
+
+"+++++++++++++++ plug-in ++++++++++++++++++
+" EasyMotion {
+    let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
+    let g:EasyMotion_do_share = 0
+    let g:EasyMotion_leader_key = '<Leader>'
+" }
+" Powerline {
+    let g:Powerline_symbols = 'fancy'
+" }
+" BufferGator {
+    map <Leader>g :BuffergatorOpen
+" }
+" Taglist {
+    map <Leader>l :TlistToggle<CR>
+" }
+"
+
+
+iabbrev #_ # -*- coding: utf-8 -*-
+
+" Pytest
+nmap <silent><Leader>f <Esc>:Pytest file<CR>
+nmap <silent><Leader>c <Esc>:Pytest class<CR>
+nmap <silent><Leader>m <Esc>:Pytest method<CR>
+
+nmap <c-s> <Plug>Ysurround
+xmap s <Plug>VSurround
+imap <c-s> <Plug>ISurround
+
+inoremap $$ $
+inoremap (( ()<left>
+inoremap [[ []<left>
+inoremap {{ {}<left>
+inoremap ${ {}<left><CR><esc>O
+inoremap << <><left>
+inoremap '' ''<left>
+inoremap "" ""<left>
+inoremap <c-D> <backspace><delete>
 
 " Use ,/ to cancel highlight
 map <silent><Leader>/ :nohlsearch<CR>
@@ -105,10 +146,14 @@ nnoremap ; :
 nnoremap :: :!
 
 " Use Ctrl-JKLH to jump in split windows.
-map <C-J> <C-W>j
-map <C-K> <C-W>k
-map <C-L> <C-W>l
-map <C-H> <C-W>h
+nmap <c-j> <C-W>j
+nmap <c-k> <C-W>k
+nmap <c-l> <C-W>l
+nmap <c-l> <C-W>h
+imap <c-j> <down>
+imap <c-k> <up>
+imap <c-h> <left>
+imap <c-l> <right>
 nnoremap <c-p> :bp<CR>
 nnoremap <c-n> :bn<CR>
 
@@ -126,9 +171,7 @@ nnoremap <silent>* *zz
 nnoremap <silent># #zz
 
 " Use jk to ESC in insert mode
-" kj: '/tmp/a<cursor>' --(kj)-> '/tmp/a'<cursor & insert mode>
 imap jk <ESC>
-imap kj <ESC>la
 vmap jk <ESC>
 
 " Use - to exchange the line and above
@@ -151,43 +194,3 @@ vnoremap > >gv
 
 " Use Y to copy line
 map Y y$
-
-"+++++++++++++++ plug-in ++++++++++++++++++
-" EasyMotion {
-    let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
-    let g:EasyMotion_do_share = 0
-    let g:EasyMotion_leader_key = '<Leader>'
-" }
-" Powerline {
-    let g:Powerline_symbols = 'fancy'
-" }
-" BufferGator {
-    map <Leader>g :BuffergatorOpen
-" }
-" Taglist {
-    map <Leader>l :TlistToggle<CR>
-" }
-"
-
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
-
-iabbrev #_ # -*- coding: utf-8 -*-
-
-" Pytest
-nmap <silent><Leader>f <Esc>:Pytest file<CR>
-nmap <silent><Leader>c <Esc>:Pytest class<CR>
-nmap <silent><Leader>m <Esc>:Pytest method<CR>
-
-nmap <c-s> <Plug>Ysurround
-xmap s <Plug>VSurround
-imap <c-s> <Plug>ISurround
-
-inoremap $$ $
-inoremap (( ()<left>
-inoremap [[ []<left>
-inoremap {{ {}<left>
-inoremap ${ {}<left><CR><esc>O
-inoremap << <><left>
-inoremap '' ''<left>
-inoremap "" ""<left>
-inoremap <c-D> <backspace><delete>
