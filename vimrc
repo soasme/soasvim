@@ -126,7 +126,9 @@ nnoremap <silent>* *zz
 nnoremap <silent># #zz
 
 " Use jk to ESC in insert mode
+" kj: '/tmp/a<cursor>' --(kj)-> '/tmp/a'<cursor & insert mode>
 imap jk <ESC>
+imap kj <ESC>la
 vmap jk <ESC>
 
 " Use - to exchange the line and above
