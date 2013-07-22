@@ -136,7 +136,10 @@ inoremap ${ {}<left><CR><esc>O
 inoremap << <><left>
 inoremap '' ''<left>
 inoremap "" ""<left>
-inoremap <c-D> <backspace><delete>
+nmap <leader>' viw<esc>a'<esc>hbi'<esc>lel
+nmap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+nmap <leader>( viw<esc>a)<esc>hbi(<esc>lel
+nmap <leader>[ viw<esc>a]<esc>hbi[<esc>lel
 
 " Use ,/ to cancel highlight
 map <silent><Leader>/ :nohlsearch<CR>
@@ -193,4 +196,4 @@ vnoremap > >gv
 " }
 
 " Use Y to copy line
-map Y y$
+nmap Y y$
