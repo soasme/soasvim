@@ -152,7 +152,7 @@ nnoremap :: :!
 nmap <c-j> <C-W>j
 nmap <c-k> <C-W>k
 nmap <c-l> <C-W>l
-nmap <c-l> <C-W>h
+nmap <c-h> <C-W>h
 imap <c-j> <down>
 imap <c-k> <up>
 imap <c-h> <left>
