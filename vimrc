@@ -154,9 +154,9 @@ imap <c-j> <down>
 imap <c-k> <up>
 imap <c-h> <left>
 imap <c-l> <right>
+imap <c-e> <backspace>
 nnoremap <c-p> :bp<CR>
 nnoremap <c-n> :bn<CR>
-
 " Use H/L to jump begin and end
 noremap H ^
 noremap L $
