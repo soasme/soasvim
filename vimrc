@@ -59,7 +59,8 @@ endif
 set rtp+=$GOROOT/misc/vim
 set background=dark " Assume a dark background
 filetype plugin indent on " Automatically detect file type
-set smartindent " indent the same level of the previous line
+set autoindent " indent the same level of the previous line
+set shiftround " use <c-d> <c-t> to round the indent in insert mode.
 syntax on " Syntax highlighting
 scriptencoding utf-8 " you really want me to explain this?
 set cursorline " highlight current line
@@ -83,6 +84,7 @@ set showbreak=↪
 set scrolljump=5 " lines to scroll when cursor leaves screen
 set shiftwidth=4 " use indents of 4 spaces
 set expandtab " tabs ---> spaces
+set smarttab
 set tabstop=4 " an indentation every four columns
 set softtabstop=4 " let backspace delete indent
 autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")')) " remote trailing whitespace and ^M chars
@@ -176,7 +178,6 @@ nnoremap <silent>n nzz
 nnoremap <silent>N Nzz
 nnoremap <silent>* *zz
 nnoremap <silent># #zz
-
 " Use jk to ESC in insert mode
 imap jk <ESC>
 vmap jk <ESC>
