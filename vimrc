@@ -104,6 +104,9 @@ au WinEnter * :setlocal relativenumber
 "+++++++++++++++ Mapping ++++++++++++++++
 " Use , as Leader Key
 let mapleader=','
+let g:maplocalleader='`'
+nnoremap <LocalLeader>i2 :setl ts=2 sw=2 sts=2<CR>
+nnoremap <LocalLeader>i4 :setl ts=4 sw=4 sts=4<CR>
 
 "+++++++++++++++ plug-in ++++++++++++++++++
 " EasyMotion {
