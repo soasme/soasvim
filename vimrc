@@ -113,6 +113,7 @@ let mapleader=','
 let g:maplocalleader='`'
 nnoremap <LocalLeader>i2 :setl ts=2 sw=2 sts=2<CR>
 nnoremap <LocalLeader>i4 :setl ts=4 sw=4 sts=4<CR>
+nnoremap <leader>so :so %<CR>
 
 "+++++++++++++++ plug-in ++++++++++++++++++
 " EasyMotion {
