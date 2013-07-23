@@ -6,7 +6,7 @@ call vundle#rc()
 
 set t_Co=256
 let g:solarized_termcolors=256
-colorscheme Monokai
+"colorscheme Monokai " Ahh theme-bored-easily-syndrome.
 set background=dark
 
 "+++++++++++++++ Bundle ++++++++++++++++++
@@ -14,6 +14,10 @@ Bundle 'gmarik/vundle'
 
 Bundle 'surround.vim'
 Bundle 'taglist.vim'
+Bundle 'bufkill.vim'
+Bundle 'slim-template/vim-slim'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'vim-ruby/vim-ruby'
 Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
 Bundle 'git://github.com/ap/vim-css-color.git'
