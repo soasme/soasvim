@@ -98,6 +98,9 @@ set colorcolumn=85
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 " use relative (offset) line number only in active window split
 set relativenumber
+set undofile
+set undodir=~/.tmp
+set undolevels=1000
 
 au WinEnter * :setlocal relativenumber
 
