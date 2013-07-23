@@ -102,6 +102,9 @@ set undofile
 set undodir=~/.tmp
 set undolevels=1000
 
+set autoread
+set autowrite
+
 au WinEnter * :setlocal relativenumber
 
 "+++++++++++++++ Mapping ++++++++++++++++
