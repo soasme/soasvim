@@ -103,7 +103,6 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
 " use relative (offset) line number only in active window split
 set relativenumber
 set undofile
-set undodir=~/.tmp
 set undolevels=1000
 
 set autoread
@@ -120,6 +119,9 @@ nnoremap <leader>i4 :setl ts=4 sw=4 sts=4<CR>
 nnoremap <leader>so :so %<CR>
 nnoremap <leader>ms :marks<cr>
 nnoremap <leader>dm :delmarks 
+" Speed up viewport scrolling
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
 
 
 "+++++++++++++++ plug-in ++++++++++++++++++
