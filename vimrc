@@ -201,10 +201,10 @@ nnoremap <silent># #zz
 imap jk <ESC>
 vmap jk <ESC>
 
-" Use - to exchange the line and above
-" Use _ to exchange the line and next
-map - ddkP
-map _ ddp
+if bufwinnr(1)
+    map + <C-W>+
+    map _ <C-W>-
+endif
 
 " Use space to select a word.
 nmap <space> viw
