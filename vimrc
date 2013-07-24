@@ -113,6 +113,7 @@ let mapleader=','
 "let g:maplocalleader='='
 nnoremap <leader>i2 :setl ts=2 sw=2 sts=2<CR>
 nnoremap <leader>i4 :setl ts=4 sw=4 sts=4<CR>
+nnoremap <leader>so :so %<CR>
 nnoremap <leader>ms :marks<cr>
 nnoremap <leader>dm :delmarks 
 
