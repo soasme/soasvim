@@ -64,6 +64,7 @@ set background=dark " Assume a dark background
 filetype plugin indent on " Automatically detect file type
 set autoindent " indent the same level of the previous line
 set shiftround " use <c-d> <c-t> to round the indent in insert mode.
+set magic " Enable extended regexes.
 syntax on " Syntax highlighting
 scriptencoding utf-8 " you really want me to explain this?
 set cursorline " highlight current line
