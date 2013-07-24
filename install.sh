@@ -6,6 +6,9 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 ln -s ~/.vim/vimrc ~/.vimrc
 
 mkdir -p ~/.vim/colors
+mkdir -p ~/.vim/undo
+mkdir -p ~/.vim/swaps
+mkdir -p ~/.vim/backups
 cd ~/.vim/colors
 
 curl https://raw.github.com/tpope/vim-vividchalk/master/colors/vividchalk.vim > vividchalk.vim
