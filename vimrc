@@ -6,7 +6,7 @@ call vundle#rc()
 
 set t_Co=256
 let g:solarized_termcolors=256
-"colorscheme Monokai " Ahh theme-bored-easily-syndrome.
+colorscheme lucius " Ahh theme-bored-easily-syndrome.
 set background=dark
 
 "+++++++++++++++ Bundle ++++++++++++++++++
