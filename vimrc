@@ -221,3 +221,4 @@ vnoremap > >gv
 
 " Use Y to copy line
 nmap Y y$
+nmap <leader><enter> o<esc>
