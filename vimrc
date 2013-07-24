@@ -56,6 +56,9 @@ if executable('zsh')
 endif
 
 " Formatting {
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+set undodir=~/.vim/undo
 set rtp+=$GOROOT/misc/vim
 set background=dark " Assume a dark background
 filetype plugin indent on " Automatically detect file type
