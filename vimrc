@@ -153,13 +153,14 @@ xmap s <Plug>VSurround
 imap <c-s> <Plug>ISurround
 
 inoremap $$ $
-inoremap (( ()<left>
-inoremap [[ []<left>
-inoremap {{ {}<left>
-inoremap ${ {}<left><CR><esc>O
-inoremap << <><left>
+inoremap () ()<left>
+inoremap [] []<left>
+inoremap {} {}<left>
+inoremap {{ {}<left><CR><esc>O
+inoremap <> <><left>
 inoremap '' ''<left>
 inoremap "" ""<left>
+inoremap <c-o> <ESC>O
 nmap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 nmap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 nmap <leader>( viw<esc>a)<esc>hbi(<esc>lel
