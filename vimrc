@@ -64,7 +64,7 @@ set background=dark " Assume a dark background
 filetype plugin indent on " Automatically detect file type
 set autoindent " indent the same level of the previous line
 set shiftround " use <c-d> <c-t> to round the indent in insert mode.
-set magic " Enable extended regexes.
+set magic " Enable extended regular expression.
 syntax on " Syntax highlighting
 scriptencoding utf-8 " you really want me to explain this?
 set cursorline " highlight current line
@@ -107,7 +107,6 @@ set undolevels=1000
 
 set autoread
 set autowrite
-
 au WinEnter * :setlocal relativenumber
 
 "+++++++++++++++ Mapping ++++++++++++++++
@@ -172,6 +171,7 @@ map <silent><Leader>/ :nohlsearch<CR>
 " Just type ; as :, example";w" will save file
 nnoremap ; :
 nnoremap :: :!
+
 
 " Use Ctrl-JKLH to jump in split windows.
 nmap <c-j> <C-W>j
