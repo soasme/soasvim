@@ -125,7 +125,6 @@ nnoremap <leader>dm :delmarks
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
-
 "+++++++++++++++ plug-in ++++++++++++++++++
 " EasyMotion {
     let g:EasyMotion_keys = 'abcdefghijklmnopqrstuvwxyz'
@@ -142,12 +141,9 @@ nnoremap <C-y> 3<C-y>
     map <Leader>l :TlistToggle<CR>
 " }
 "
-
-
 iabbrev #_ # -*- coding: utf-8 -*-
 
 " Pytest
-nmap <silent><Leader>f <Esc>:Pytest file<CR>
 nmap <silent><Leader>c <Esc>:Pytest class<CR>
 nmap <silent><Leader>m <Esc>:Pytest method<CR>
 
@@ -225,3 +221,6 @@ vnoremap > >gv
 " Use Y to copy line
 nmap Y y$
 nmap <leader><enter> o<esc>
+
+" whenever type % you'll jump to the matching object
+noremap % v%
