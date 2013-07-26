@@ -22,7 +22,6 @@ Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
 Bundle 'git://github.com/ap/vim-css-color.git'
 Bundle 'git://github.com/tpope/vim-fugitive.git'
-Bundle 'git://github.com/jeetsukumaran/vim-buffergator.git'
 Bundle 'git://github.com/michaeljsmith/vim-indent-object.git'
 Bundle 'git://github.com/ervandew/supertab.git'
 Bundle 'git://github.com/Lokaltog/vim-powerline.git'
@@ -121,7 +120,7 @@ nnoremap <leader>dm :delmarks
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
-
+nmap <leader>a :CtrlPBuffer<cr>
 
 "+++++++++++++++ plug-in ++++++++++++++++++
 " EasyMotion {
