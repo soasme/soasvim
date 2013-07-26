@@ -110,6 +110,8 @@ set autowrite
 
 au WinEnter * :setlocal relativenumber
 
+cabbr <expr> %% expand('%:p:h') " :e %%/ -> :e $current_path/
+
 "+++++++++++++++ Mapping ++++++++++++++++
 " Use , as Leader Key
 let mapleader=','
