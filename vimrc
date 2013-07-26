@@ -71,7 +71,6 @@ set cursorline " highlight current line
 set cursorcolumn " highlight current column
 set showmode " display the current mode
 set tabpagemax=15 " only show 15 tabs
-set nu " line numbers on
 set showmatch " find matching brackets
 set incsearch " find as you type search
 set hlsearch " highlight search words
@@ -121,6 +120,7 @@ nnoremap <leader>dm :delmarks
 " Speed up viewport scrolling
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
+
 
 
 "+++++++++++++++ plug-in ++++++++++++++++++
