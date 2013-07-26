@@ -22,7 +22,6 @@ Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
 Bundle 'git://github.com/ap/vim-css-color.git'
 Bundle 'git://github.com/tpope/vim-fugitive.git'
-Bundle 'git://github.com/jeetsukumaran/vim-buffergator.git'
 Bundle 'git://github.com/michaeljsmith/vim-indent-object.git'
 Bundle 'git://github.com/ervandew/supertab.git'
 Bundle 'git://github.com/Lokaltog/vim-powerline.git'
@@ -64,14 +63,13 @@ set background=dark " Assume a dark background
 filetype plugin indent on " Automatically detect file type
 set autoindent " indent the same level of the previous line
 set shiftround " use <c-d> <c-t> to round the indent in insert mode.
-set magic " Enable extended regexes.
+set magic " Enable extended regular expression.
 syntax on " Syntax highlighting
 scriptencoding utf-8 " you really want me to explain this?
 set cursorline " highlight current line
 set cursorcolumn " highlight current column
 set showmode " display the current mode
 set tabpagemax=15 " only show 15 tabs
-set nu " line numbers on
 set showmatch " find matching brackets
 set incsearch " find as you type search
 set hlsearch " highlight search words
@@ -107,7 +105,6 @@ set undolevels=1000
 
 set autoread
 set autowrite
-
 au WinEnter * :setlocal relativenumber
 
 cabbr <expr> %% expand('%:p:h') " :e %%/ -> :e $current_path/
@@ -124,6 +121,8 @@ nnoremap <leader>dm :delmarks
 " Speed up viewport scrolling
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
+
+nmap <leader>a :CtrlPBuffer<cr>
 
 "+++++++++++++++ plug-in ++++++++++++++++++
 " EasyMotion {
@@ -171,6 +170,7 @@ map <silent><Leader>/ :nohlsearch<CR>
 " Just type ; as :, example";w" will save file
 nnoremap ; :
 nnoremap :: :!
+
 
 " Use Ctrl-JKLH to jump in split windows.
 nmap <c-j> <C-W>j
