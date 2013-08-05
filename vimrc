@@ -141,8 +141,6 @@ nmap <leader>a :CtrlPBuffer<cr>
     map <Leader>l :TlistToggle<CR>
 " }
 "
-
-
 iabbrev #_ # -*- coding: utf-8 -*-
 
 " Pytest
@@ -226,3 +224,6 @@ vnoremap > >gv
 " Use Y to copy line
 nmap Y y$
 nmap <leader><enter> o<esc>
+
+" whenever type % you'll jump to the matching object
+noremap % v%
