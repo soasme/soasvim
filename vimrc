@@ -39,6 +39,7 @@ Bundle 'git://github.com/tpope/vim-dispatch.git'
 Bundle 'git@github.com:kien/ctrlp.vim.git'
 Bundle 'git@github.com:slim-template/vim-slim.git'
 Bundle 'git@github.com:alfredodeza/pytest.vim.git'
+Bundle 'git@github.com:Valloric/YouCompleteMe.git'
 
 if executable('ack')
     Bundle 'git://github.com/mileszs/ack.vim.git'
@@ -145,9 +146,10 @@ nmap <leader>a :CtrlPBuffer<cr>
 iabbrev #_ # -*- coding: utf-8 -*-
 
 " Pytest
-nmap <silent><Leader>f <Esc>:Pytest file<CR>
+nmap <silent><Leader>s <Esc>:Pytest session<CR>
 nmap <silent><Leader>c <Esc>:Pytest class<CR>
 nmap <silent><Leader>m <Esc>:Pytest method<CR>
+
 
 nmap <c-s> <Plug>Ysurround
 xmap s <Plug>VSurround
