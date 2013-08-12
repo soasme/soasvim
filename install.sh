@@ -12,4 +12,5 @@ mkdir -p ~/.vim/backups
 echo "installing plugin using Vundle"
 vim +BundleInstall! +BundleClean +q
 
-~/.vim/bundle/YouCompleteMe/install.sh --clang-completer
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh --clang-completer
