@@ -79,6 +79,7 @@ set smartcase
 set wildmenu " show list instead
 set wildmode=list:longest,full " show list instead of just completing
 set whichwrap=b,s,h,l,<,>,[,] " backspace and cursor keys wrap to
+set backspace=indent,eol,start
 set foldenable " hey, open it if you like.
 set list
 set listchars=tab:,.,trail:.,extends:#,nbsp:. "Highlight problematic whitespace
@@ -161,6 +162,7 @@ inoremap <> <><left>
 inoremap '' ''<left>
 inoremap "" ""<left>
 inoremap <c-o> <ESC>O
+inoremap <c-tab> <ESC><s-tab>
 nmap <leader>' viw<esc>a'<esc>hbi'<esc>lel
 nmap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 nmap <leader>( viw<esc>a)<esc>hbi(<esc>lel
