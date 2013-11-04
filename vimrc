@@ -149,6 +149,7 @@ nmap <silent><Leader>s <Esc>:Pytest session<CR>
 nmap <silent><Leader>c <Esc>:Pytest class<CR>
 nmap <silent><Leader>m <Esc>:Pytest method<CR>
 
+set pastetoggle=<F10>
 
 nmap <c-s> <Plug>Ysurround
 xmap s <Plug>VSurround
