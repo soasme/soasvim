@@ -173,7 +173,7 @@ map <silent><Leader>/ :nohlsearch<CR>
 
 " Just type ; as :, example";w" will save file
 nnoremap ; :
-nnoremap :: :!
+nnoremap :: :!<up>
 
 
 " Use Ctrl-JKLH to jump in split windows.
