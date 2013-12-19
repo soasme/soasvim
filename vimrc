@@ -38,11 +38,12 @@ Bundle 'git://github.com/tpope/vim-dispatch.git'
 Bundle 'git://github.com/kien/ctrlp.vim.git'
 Bundle 'git://github.com/slim-template/vim-slim.git'
 Bundle 'git://github.com/alfredodeza/pytest.vim.git'
-Bundle 'git://github.com/Valloric/YouCompleteMe.git'
+Bundle 'Valloric/YouCompleteMe'
 
 if executable('ack')
     Bundle 'git://github.com/mileszs/ack.vim.git'
 endif
+
 
 if executable('pbcopy')
     vmap <C-c> :call system("pbcopy", getreg("\""))
@@ -148,6 +149,7 @@ nmap <silent><Leader>s <Esc>:Pytest session<CR>
 nmap <silent><Leader>c <Esc>:Pytest class<CR>
 nmap <silent><Leader>m <Esc>:Pytest method<CR>
 
+set pastetoggle=<F10>
 
 nmap <c-s> <Plug>Ysurround
 xmap s <Plug>VSurround
