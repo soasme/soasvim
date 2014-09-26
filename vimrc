@@ -16,6 +16,7 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'keitheis/vim-plim'
 Bundle 'nanotech/jellybeans.vim'
+Bundle 'derekwyatt/vim-scala'
 Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
 Bundle 'git://github.com/ap/vim-css-color.git'
@@ -95,6 +96,7 @@ set tabstop=4 " an indentation every four columns
 set softtabstop=4 " let backspace delete indent
 autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")')) " remote trailing whitespace and ^M chars
 autocmd FileType html,javascript,ruby,css,eruby,slim setlocal et sta sw=2 sts=2
+autocmd FileType scala setlocal nospell
 au BufRead,BufNewFile *.ru setfiletype ruby
 set showcmd " show command
 set ruler " show ruler
