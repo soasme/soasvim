@@ -4,10 +4,6 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-set t_Co=256
-let g:solarized_termcolors=256
-colorscheme lucius " Ahh theme-bored-easily-syndrome.
-set background=dark
 
 "+++++++++++++++ Bundle ++++++++++++++++++
 Bundle 'gmarik/vundle'
@@ -18,6 +14,8 @@ Bundle 'bufkill.vim'
 Bundle 'slim-template/vim-slim'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'keitheis/vim-plim'
+Bundle 'nanotech/jellybeans.vim'
 Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
 Bundle 'git://github.com/ap/vim-css-color.git'
@@ -37,7 +35,6 @@ Bundle 'git://github.com/altercation/vim-colors-solarized.git'
 Bundle 'git://github.com/tpope/vim-dispatch.git'
 Bundle 'git://github.com/kien/ctrlp.vim.git'
 Bundle 'git://github.com/slim-template/vim-slim.git'
-Bundle 'git://github.com/alfredodeza/pytest.vim.git'
 Bundle 'Valloric/YouCompleteMe'
 
 if executable('ack')
@@ -54,6 +51,11 @@ endif
 if executable('zsh')
     set shell=/bin/zsh
 endif
+
+set t_Co=256
+let g:solarized_termcolors=256
+colorscheme jellybeans " Ahh theme-bored-easily-syndrome.
+set background=dark
 
 " Formatting {
 set backupdir=~/.vim/backups
@@ -175,7 +177,7 @@ map <silent><Leader>/ :nohlsearch<CR>
 
 " Just type ; as :, example";w" will save file
 nnoremap ; :
-nnoremap :: :!
+nnoremap :: :!<up>
 
 
 " Use Ctrl-JKLH to jump in split windows.
