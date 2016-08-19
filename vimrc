@@ -8,8 +8,10 @@ call vundle#rc()
 syntax on " Syntax highlighting
 set t_Co=256
 set background=dark
+let g:solarized_termcolors=256
 let g:solarized_termtrans = 1
 colorscheme flatui
+
 
 "+++++++++++++++ Bundle ++++++++++++++++++
 Bundle 'gmarik/vundle'
@@ -64,10 +66,6 @@ if executable('zsh')
     set shell=/bin/zsh
 endif
 
-set t_Co=256
-let g:solarized_termcolors=256
-colorscheme jellybeans " Ahh theme-bored-easily-syndrome.
-set background=dark
 
 " Formatting {
 set backupdir=~/.vim/backups
