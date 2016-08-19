@@ -4,42 +4,47 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-set t_Co=256
-let g:solarized_termcolors=256
-colorscheme lucius " Ahh theme-bored-easily-syndrome.
-set background=dark
 
+syntax on " Syntax highlighting
+set t_Co=256
+set background=dark
+let g:solarized_termtrans = 1
+colorscheme flatui
 "+++++++++++++++ Bundle ++++++++++++++++++
 Bundle 'gmarik/vundle'
 
+
 Bundle 'surround.vim'
+"Bundle 'darthmall/vim-vue'
+"Bundle 'mattn/emmet-vim'
 Bundle 'taglist.vim'
 Bundle 'bufkill.vim'
-Bundle 'slim-template/vim-slim'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'derekwyatt/vim-scala'
+"Bundle 'derekwyatt/vim-scala'
+Bundle 'tpope/vim-markdown'
+"Bundle 'vim-scripts/SyntaxRange'
+"Bundle 'rust-lang/rust.vim'
 Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
-Bundle 'git://github.com/ap/vim-css-color.git'
+"Bundle 'git://github.com/ap/vim-css-color.git'
 Bundle 'git://github.com/tpope/vim-fugitive.git'
 Bundle 'git://github.com/michaeljsmith/vim-indent-object.git'
-Bundle 'git://github.com/ervandew/supertab.git'
+"Bundle 'git://github.com/ervandew/supertab.git'
 Bundle 'git://github.com/Lokaltog/vim-powerline.git'
-Bundle 'git://github.com/plasticboy/vim-markdown.git'
 Bundle 'git://github.com/pangloss/vim-javascript.git'
-Bundle 'git://github.com/jnwhiteh/vim-golang.git'
+"Bundle 'git://github.com/jnwhiteh/vim-golang.git'
 Bundle 'git://github.com/vim-scripts/genutils.git'
-Bundle 'git://github.com/terryma/vim-multiple-cursors.git'
+"Bundle 'git://github.com/terryma/vim-multiple-cursors.git'
 Bundle 'git://github.com/mhinz/vim-signify.git'
-Bundle 'git://github.com/scrooloose/syntastic.git'
-Bundle 'git://github.com/kevinw/pyflakes-vim.git'
-Bundle 'git://github.com/altercation/vim-colors-solarized.git'
+"Bundle 'git://github.com/scrooloose/syntastic.git'
+"Bundle 'git://github.com/kevinw/pyflakes-vim.git'
+"Bundle 'git://github.com/altercation/vim-colors-solarized.git'
 Bundle 'git://github.com/tpope/vim-dispatch.git'
 Bundle 'git://github.com/kien/ctrlp.vim.git'
-Bundle 'git://github.com/slim-template/vim-slim.git'
-Bundle 'git://github.com/alfredodeza/pytest.vim.git'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'git://github.com/slim-template/vim-slim.git'
+"Bundle 'git://github.com/alfredodeza/pytest.vim.git'
+"Bundle 'Valloric/YouCompleteMe'
 
 if executable('ack')
     Bundle 'git://github.com/mileszs/ack.vim.git'
@@ -60,13 +65,15 @@ endif
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 set undodir=~/.vim/undo
+set gfn=monaco:h12
 set rtp+=$GOROOT/misc/vim
+set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set background=dark " Assume a dark background
 filetype plugin indent on " Automatically detect file type
 set autoindent " indent the same level of the previous line
 set shiftround " use <c-d> <c-t> to round the indent in insert mode.
 set magic " Enable extended regular expression.
-syntax on " Syntax highlighting
 scriptencoding utf-8 " you really want me to explain this?
 set cursorline " highlight current line
 set cursorcolumn " highlight current column
@@ -92,16 +99,18 @@ set expandtab " tabs ---> spaces
 set smarttab
 set tabstop=4 " an indentation every four columns
 set softtabstop=4 " let backspace delete indent
-autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")')) " remote trailing whitespace and ^M chars
-autocmd FileType html,javascript,ruby,css,eruby,slim setlocal et sta sw=2 sts=2
+autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml,rust autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")')) " remote trailing whitespace and ^M chars
+autocmd FileType html,javascript,ruby,css,eruby,slim,vue setlocal et sta sw=2 sts=2
 autocmd FileType scala setlocal nospell
 au BufRead,BufNewFile *.ru setfiletype ruby
+au BufRead,BufNewFile *.rs setfiletype rust
+au BufNewFile,BufRead *.vue setf vue
 set showcmd " show command
 set ruler " show ruler
 set spell spelllang=en_us " spell check
 set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
 set colorcolumn=85
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc
+set wildignore+=*.so,*.swp,*.zip,*.pyc
 " use relative (offset) line number only in active window split
 set relativenumber
 set undofile
@@ -127,6 +136,7 @@ nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
 nmap <leader>a :CtrlPBuffer<cr>
+let g:ctrlp_map = '<c-p>'
 
 "+++++++++++++++ plug-in ++++++++++++++++++
 " EasyMotion {
