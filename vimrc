@@ -10,6 +10,7 @@ set t_Co=256
 set background=dark
 let g:solarized_termtrans = 1
 colorscheme flatui
+
 "+++++++++++++++ Bundle ++++++++++++++++++
 Bundle 'gmarik/vundle'
 
@@ -25,6 +26,8 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-markdown'
 "Bundle 'vim-scripts/SyntaxRange'
 "Bundle 'rust-lang/rust.vim'
+"Bundle 'keitheis/vim-plim'
+"Bundle 'derekwyatt/vim-scala'
 Bundle 'git://github.com/scrooloose/nerdcommenter.git'
 Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
 "Bundle 'git://github.com/ap/vim-css-color.git'
@@ -60,6 +63,11 @@ endif
 if executable('zsh')
     set shell=/bin/zsh
 endif
+
+set t_Co=256
+let g:solarized_termcolors=256
+colorscheme jellybeans " Ahh theme-bored-easily-syndrome.
+set background=dark
 
 " Formatting {
 set backupdir=~/.vim/backups
