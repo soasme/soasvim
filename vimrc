@@ -248,3 +248,14 @@ nmap <leader><enter> o<esc>
 
 " whenever type % you'll jump to the matching object
 noremap % v%
+
+set spell spelllang=en_us
+setlocal spell spelllang=en_us
+highlight clear SpellBad
+highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
+highlight clear SpellCap
+highlight SpellCap term=underline cterm=underline
+highlight clear SpellRare
+highlight SpellRare term=underline cterm=underline
+highlight clear SpellLocal
+highlight SpellLocal term=underline cterm=underline
