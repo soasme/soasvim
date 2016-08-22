@@ -1,10 +1,6 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-
 syntax on " Syntax highlighting
 set t_Co=256
 set background=dark
@@ -12,49 +8,55 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans = 1
 colorscheme flatui
 
+call plug#begin('~/.vim/plugged')
 
-"+++++++++++++++ Bundle ++++++++++++++++++
-Bundle 'gmarik/vundle'
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
 
 
-Bundle 'surround.vim'
-"Bundle 'darthmall/vim-vue'
-"Bundle 'mattn/emmet-vim'
-Bundle 'taglist.vim'
-Bundle 'bufkill.vim'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'vim-ruby/vim-ruby'
-"Bundle 'derekwyatt/vim-scala'
-Bundle 'tpope/vim-markdown'
-"Bundle 'vim-scripts/SyntaxRange'
-"Bundle 'rust-lang/rust.vim'
-"Bundle 'keitheis/vim-plim'
-"Bundle 'derekwyatt/vim-scala'
-Bundle 'git://github.com/scrooloose/nerdcommenter.git'
-Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
-"Bundle 'git://github.com/ap/vim-css-color.git'
-Bundle 'git://github.com/tpope/vim-fugitive.git'
-Bundle 'git://github.com/michaeljsmith/vim-indent-object.git'
-"Bundle 'git://github.com/ervandew/supertab.git'
-Bundle 'git://github.com/Lokaltog/vim-powerline.git'
-Bundle 'git://github.com/pangloss/vim-javascript.git'
-"Bundle 'git://github.com/jnwhiteh/vim-golang.git'
-Bundle 'git://github.com/vim-scripts/genutils.git'
-"Bundle 'git://github.com/terryma/vim-multiple-cursors.git'
-Bundle 'git://github.com/mhinz/vim-signify.git'
-"Bundle 'git://github.com/scrooloose/syntastic.git'
-"Bundle 'git://github.com/kevinw/pyflakes-vim.git'
-"Bundle 'git://github.com/altercation/vim-colors-solarized.git'
-Bundle 'git://github.com/tpope/vim-dispatch.git'
-Bundle 'git://github.com/kien/ctrlp.vim.git'
-"Bundle 'git://github.com/slim-template/vim-slim.git'
-"Bundle 'git://github.com/alfredodeza/pytest.vim.git'
-"Bundle 'Valloric/YouCompleteMe'
+"+++++++++++++++ Plug ++++++++++++++++++
+
+
+Plug 'tpope/vim-surround'
+"Plug 'darthmall/vim-vue'
+"Plug 'mattn/emmet-vim'
+"Plug 'taglist.vim'
+"Plug 'bufkill.vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'vim-ruby/vim-ruby'
+"Plug 'derekwyatt/vim-scala'
+Plug 'tpope/vim-markdown'
+"Plug 'vim-scripts/SyntaxRange'
+"Plug 'rust-lang/rust.vim'
+"Plug 'keitheis/vim-plim'
+"Plug 'derekwyatt/vim-scala'
+Plug 'git://github.com/scrooloose/nerdcommenter.git'
+Plug 'git://github.com/Lokaltog/vim-easymotion.git'
+"Plug 'git://github.com/ap/vim-css-color.git'
+Plug 'git://github.com/tpope/vim-fugitive.git'
+Plug 'git://github.com/michaeljsmith/vim-indent-object.git'
+"Plug 'git://github.com/ervandew/supertab.git'
+Plug 'git://github.com/Lokaltog/vim-powerline.git'
+Plug 'git://github.com/pangloss/vim-javascript.git'
+"Plug 'git://github.com/jnwhiteh/vim-golang.git'
+Plug 'git://github.com/vim-scripts/genutils.git'
+"Plug 'git://github.com/terryma/vim-multiple-cursors.git'
+Plug 'git://github.com/mhinz/vim-signify.git'
+"Plug 'git://github.com/scrooloose/syntastic.git'
+"Plug 'git://github.com/kevinw/pyflakes-vim.git'
+"Plug 'git://github.com/altercation/vim-colors-solarized.git'
+Plug 'git://github.com/tpope/vim-dispatch.git'
+Plug 'git://github.com/kien/ctrlp.vim.git'
+"Plug 'git://github.com/slim-template/vim-slim.git'
+"Plug 'git://github.com/alfredodeza/pytest.vim.git'
+"Plug 'Valloric/YouCompleteMe'
+call plug#end()
 
 if executable('ack')
-    Bundle 'git://github.com/mileszs/ack.vim.git'
+    Plug 'git://github.com/mileszs/ack.vim.git'
 endif
 
+call plug#end()
 
 if executable('pbcopy')
     vmap <C-c> :call system("pbcopy", getreg("\""))
