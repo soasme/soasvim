@@ -26,6 +26,8 @@ Plug 'git://github.com/vim-scripts/genutils.git'
 Plug 'git://github.com/mhinz/vim-signify.git'
 Plug 'git://github.com/tpope/vim-dispatch.git'
 Plug 'git://github.com/kien/ctrlp.vim.git'
+Plug 'Valloric/YouCompleteMe'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 if executable('ack')
@@ -151,20 +153,20 @@ nmap <c-s> <Plug>Ysurround
 xmap s <Plug>VSurround
 imap <c-s> <Plug>ISurround
 
-inoremap $$ $
-inoremap () ()<left>
-inoremap [] []<left>
-inoremap {} {}<left>
-inoremap {{ {}<left><CR><esc>O
-inoremap <> <><left>
-inoremap '' ''<left>
-inoremap "" ""<left>
-inoremap <c-o> <ESC>O
-inoremap <c-tab> <ESC><s-tab>
-nmap <leader>' viw<esc>a'<esc>hbi'<esc>lel
-nmap <leader>" viw<esc>a"<esc>hbi"<esc>lel
-nmap <leader>( viw<esc>a)<esc>hbi(<esc>lel
-nmap <leader>[ viw<esc>a]<esc>hbi[<esc>lel
+"inoremap $$ $
+"inoremap () ()<left>
+"inoremap [] []<left>
+"inoremap {} {}<left>
+"inoremap {{ {}<left><CR><esc>O
+"inoremap <> <><left>
+"inoremap '' ''<left>
+"inoremap "" ""<left>
+"inoremap <c-o> <ESC>O
+"inoremap <c-tab> <ESC><s-tab>
+"nmap <leader>' viw<esc>a'<esc>hbi'<esc>lel
+"nmap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+"nmap <leader>( viw<esc>a)<esc>hbi(<esc>lel
+"nmap <leader>[ viw<esc>a]<esc>hbi[<esc>lel
 
 " Use ,/ to cancel highlight
 map <silent><Leader>/ :nohlsearch<CR>
