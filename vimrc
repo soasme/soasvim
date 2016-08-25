@@ -14,18 +14,12 @@ call plug#begin('~/.vim/plugged')
 "+++++++++++++++ Plug ++++++++++++++++++
 
 Plug 'tpope/vim-surround'
-"Plug 'darthmall/vim-vue'
-"Plug 'mattn/emmet-vim'
-"Plug 'taglist.vim'
 "Plug 'bufkill.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-ruby/vim-ruby'
-"Plug 'derekwyatt/vim-scala'
 Plug 'tpope/vim-markdown'
 "Plug 'vim-scripts/SyntaxRange'
 "Plug 'rust-lang/rust.vim'
-"Plug 'keitheis/vim-plim'
-"Plug 'derekwyatt/vim-scala'
 Plug 'git://github.com/scrooloose/nerdcommenter.git'
 Plug 'git://github.com/Lokaltog/vim-easymotion.git'
 "Plug 'git://github.com/ap/vim-css-color.git'
