@@ -224,6 +224,7 @@ nmap <leader><enter> o<esc>
 " whenever type % you'll jump to the matching object
 noremap % v%
 
+" styling for spelling bad results.
 set spell spelllang=en_us
 setlocal spell spelllang=en_us
 highlight clear SpellBad
