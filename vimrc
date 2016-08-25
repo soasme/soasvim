@@ -14,21 +14,16 @@ call plug#begin('~/.vim/plugged')
 "+++++++++++++++ Plug ++++++++++++++++++
 
 Plug 'tpope/vim-surround'
-"Plug 'bufkill.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-markdown'
-"Plug 'vim-scripts/SyntaxRange'
 Plug 'git://github.com/scrooloose/nerdcommenter.git'
 Plug 'git://github.com/Lokaltog/vim-easymotion.git'
-"Plug 'git://github.com/ap/vim-css-color.git'
 Plug 'git://github.com/tpope/vim-fugitive.git'
 Plug 'git://github.com/michaeljsmith/vim-indent-object.git'
-"Plug 'git://github.com/ervandew/supertab.git'
 Plug 'git://github.com/Lokaltog/vim-powerline.git'
 Plug 'git://github.com/pangloss/vim-javascript.git'
 Plug 'git://github.com/vim-scripts/genutils.git'
 Plug 'git://github.com/mhinz/vim-signify.git'
-"Plug 'git://github.com/scrooloose/syntastic.git'
 Plug 'git://github.com/tpope/vim-dispatch.git'
 Plug 'git://github.com/kien/ctrlp.vim.git'
 call plug#end()
