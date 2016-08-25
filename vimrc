@@ -202,11 +202,6 @@ nnoremap <silent># #zz
 imap jk <ESC>
 vmap jk <ESC>
 
-if bufwinnr(1)
-    map + <C-W>+
-    map _ <C-W>-
-endif
-
 " Use space to select a word.
 nmap <space> viw
 vmap <space> <ESC><ESC>
