@@ -15,7 +15,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-surround'
 "Plug 'bufkill.vim'
-Plug 'plasticboy/vim-markdown'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-markdown'
 "Plug 'vim-scripts/SyntaxRange'
