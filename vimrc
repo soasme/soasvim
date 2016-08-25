@@ -8,14 +8,10 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans = 1
 colorscheme flatui
 
+" Check :Plug* Commands: https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
 
-"set rtp+=~/.vim/bundle/vundle/
-"call vundle#rc()
-
-
 "+++++++++++++++ Plug ++++++++++++++++++
-
 
 Plug 'tpope/vim-surround'
 "Plug 'darthmall/vim-vue'
