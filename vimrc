@@ -28,6 +28,7 @@ Plug 'git://github.com/tpope/vim-dispatch.git'
 Plug 'git://github.com/kien/ctrlp.vim.git'
 Plug 'Valloric/YouCompleteMe'
 Plug 'jiangmiao/auto-pairs'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 if executable('ack')
@@ -86,7 +87,7 @@ set smarttab
 set tabstop=4 " an indentation every four columns
 set softtabstop=4 " let backspace delete indent
 autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml,rust autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")')) " remote trailing whitespace and ^M chars
-autocmd FileType html,javascript,ruby,css,eruby,slim,vue setlocal et sta sw=2 sts=2
+autocmd FileType html,javascript,typescript,ruby,css,eruby,slim,vue setlocal et sta sw=2 sts=2
 autocmd FileType scala setlocal nospell
 au BufRead,BufNewFile *.ru setfiletype ruby
 au BufRead,BufNewFile *.rs setfiletype rust
@@ -140,6 +141,9 @@ let g:ctrlp_map = '<c-p>'
     map <Leader>l :TlistToggle<CR>
 " }
 "
+" YouCompleteMe {
+    let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
+" }
 iabbrev #_ # -*- coding: utf-8 -*-
 
 " Pytest
@@ -217,6 +221,7 @@ vnoremap < <gv
 vnoremap > >gv
 " }
 
+
 " Use Y to copy line
 nmap Y y$
 nmap <leader><enter> o<esc>
@@ -235,3 +240,7 @@ highlight clear SpellRare
 highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
+highlight clear Search
+highlight Search term=underline cterm=underline ctermbg=DarkGray
+
+
