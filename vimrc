@@ -6,7 +6,7 @@ set t_Co=256
 set background=dark
 let g:solarized_termcolors=256
 let g:solarized_termtrans = 1
-colorscheme flatui
+"colorscheme flatui
 
 " Check :Plug* Commands: https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugged')
@@ -26,10 +26,18 @@ Plug 'git://github.com/vim-scripts/genutils.git'
 Plug 'git://github.com/mhinz/vim-signify.git'
 Plug 'git://github.com/tpope/vim-dispatch.git'
 Plug 'git://github.com/kien/ctrlp.vim.git'
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 Plug 'jiangmiao/auto-pairs'
 Plug 'leafgarland/typescript-vim'
+Plug 'rust-lang/rust.vim'
+Plug 'zah/nim.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
+
+"set t_Co=256
+set background=light
+colorscheme PaperColor
 
 if executable('ack')
     Plug 'git://github.com/mileszs/ack.vim.git'
@@ -87,7 +95,7 @@ set smarttab
 set tabstop=4 " an indentation every four columns
 set softtabstop=4 " let backspace delete indent
 autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml,rust autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")')) " remote trailing whitespace and ^M chars
-autocmd FileType html,javascript,typescript,ruby,css,eruby,slim,vue setlocal et sta sw=2 sts=2
+autocmd FileType html,javascript,typescript,ruby,css,eruby,slim,vue,lua setlocal et sta sw=2 sts=2
 autocmd FileType scala setlocal nospell
 au BufRead,BufNewFile *.ru setfiletype ruby
 au BufRead,BufNewFile *.rs setfiletype rust
